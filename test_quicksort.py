@@ -4,7 +4,7 @@ from hypothesis import given
 import hypothesis.strategies as st
 import quicksort as q
 
-@given(st.lists(st.integers()))
+@given(arr=st.lists(st.integers()))
 def test_quicksort_sorts(arr):
-    sorted = q.quicksort(arr)
-    assert all(sorted[i] <= sorted[i+1] for i in range(len(arr)-1))
+    arr_sorted = q.quicksort(arr)
+    assert all(arr_sorted[i] <= arr_sorted[i+1] for i in range(len(arr)-1))
