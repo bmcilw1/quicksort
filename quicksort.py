@@ -7,12 +7,12 @@ def quicksort(arr):
     return arr
 
 def main():
-    parser = argparse.ArgumentParser(description='Sort an array of integers using quicksort.')
-    parser.add_argument('integers', metavar='Numbers', type=float, nargs='+',
-                        help='The list of integers to sort')
+    parser = argparse.ArgumentParser(description='Sort an array of numbers using quicksort.')
+    parser.add_argument('numbers', metavar='Numbers', type=float, nargs='+',
+                        help='The list of numbers to sort')
 
     args = parser.parse_args()
-    print(quicksort(args.integers))
+    print(quicksort(args.numbers))
 
 if __name__ == '__main__':
     main()
