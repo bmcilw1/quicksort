@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 from hypothesis import given
-from mock import Mock, patch
+from unittest.mock import MagicMock
 import hypothesis.strategies as st
 import quicksort as q
 
