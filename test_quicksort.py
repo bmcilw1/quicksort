@@ -7,7 +7,7 @@ import quicksort as q
 
 @given(arr=st.lists(st.floats(allow_nan=False, allow_infinity=False) | st.integers()))
 def test_quicksort_sorts(arr):
-    arr_sorted = q.quicksort(arr)
+    arr_sorted = q.sort(arr)
     assert all(arr_sorted[i] <= arr_sorted[i+1] for i in range(len(arr)-1))
 
 @patch('quicksort.argparse')
