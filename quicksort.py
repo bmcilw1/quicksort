@@ -5,7 +5,11 @@ import argparse
 def partition(arr, low, high):
     pivot = int((low + high) / 2)
 
-    while (low < high):
+    arr[pivot], arr[high] = arr[high], arr[pivot]
+    pivot = high
+    high -= 1
+
+    while (low <= high):
         if arr[low] < arr[pivot]:
             low += 1
         elif arr[high] > arr[pivot]:
@@ -13,9 +17,9 @@ def partition(arr, low, high):
         else:
             arr[low], arr[high] = arr[high], arr[low]
             low += 1
-            high -= 1
     
     arr[pivot], arr[low] = arr[low], arr[pivot]
+    pivot = low
 
     return pivot
 
