@@ -20,11 +20,11 @@ def partition(arr, low, high):
     return pivot
 
 def quicksort(arr, low, high):
-    if (low >= high):
+    if (low > high):
         return
     
     pivot = partition(arr, low, high)
-    quicksort(arr, low, pivot)
+    quicksort(arr, low, pivot-1)
     quicksort(arr, pivot+1, high)
     return
 
