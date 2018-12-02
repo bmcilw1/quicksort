@@ -4,7 +4,6 @@ from hypothesis import given
 from unittest.mock import MagicMock, Mock, patch
 import hypothesis.strategies as st
 import quicksort as q
-import argparse
 
 @given(arr=st.lists(st.floats(allow_nan=False, allow_infinity=False) | st.integers()))
 def test_quicksort_sorts(arr):
