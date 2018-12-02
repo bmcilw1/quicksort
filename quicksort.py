@@ -12,6 +12,8 @@ def partition(arr, low, high):
             high -= 1
         else:
             arr[low], arr[high] = arr[high], arr[low]
+            low += 1
+            high -= 1
     
     arr[pivot], arr[low] = arr[low], arr[pivot]
 
